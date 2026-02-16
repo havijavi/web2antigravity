@@ -92,7 +92,7 @@ export function CampaignsPage() {
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-neutral-800">
-                                {campaigns?.map((campaign) => (
+                                {campaigns?.map((campaign: any) => (
                                     <tr key={campaign.id} className="hover:bg-neutral-800/30 transition-colors">
                                         <td className="px-6 py-4 font-medium text-white">{campaign.name}</td>
                                         <td className="px-6 py-4 text-neutral-300">
@@ -149,7 +149,7 @@ export function CampaignsPage() {
                                     onChange={e => setNewCampaign({ ...newCampaign, clientProfileId: Number(e.target.value) })}
                                 >
                                     <option value={0}>Select a client...</option>
-                                    {clients?.map(c => (
+                                    {clients?.map((c: any) => (
                                         <option key={c.id} value={c.id}>{c.name}</option>
                                     ))}
                                 </select>

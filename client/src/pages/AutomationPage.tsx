@@ -80,12 +80,12 @@ export function AutomationPage() {
                         </button>
                     </div>
                 ) : (
-                    campaigns?.map((campaign) => (
+                    campaigns?.map((campaign: any) => (
                         <div key={campaign.id} className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 hover:border-blue-500/30 transition-colors">
                             <div className="flex justify-between items-start mb-4">
                                 <div className={`p-2 rounded-lg ${campaign.platform === 'twitter' ? 'bg-blue-500/10 text-blue-400' :
-                                        campaign.platform === 'linkedin' ? 'bg-blue-700/10 text-blue-500' :
-                                            'bg-purple-500/10 text-purple-400'
+                                    campaign.platform === 'linkedin' ? 'bg-blue-700/10 text-blue-500' :
+                                        'bg-purple-500/10 text-purple-400'
                                     }`}>
                                     <Zap size={20} />
                                 </div>
@@ -93,8 +93,8 @@ export function AutomationPage() {
                                     <button
                                         onClick={() => toggleMutation.mutate({ id: campaign.id, isActive: !campaign.isActive })}
                                         className={`p-1.5 rounded-lg transition-colors ${campaign.isActive
-                                                ? 'bg-green-500/10 text-green-400 hover:bg-green-500/20'
-                                                : 'bg-neutral-800 text-neutral-400 hover:text-white'
+                                            ? 'bg-green-500/10 text-green-400 hover:bg-green-500/20'
+                                            : 'bg-neutral-800 text-neutral-400 hover:text-white'
                                             }`}
                                         title={campaign.isActive ? 'Pause' : 'Resume'}
                                     >

@@ -79,7 +79,7 @@ export function ClientsPage() {
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-                        {clients?.map((client) => (
+                        {clients?.map((client: any) => (
                             <div key={client.id} className="bg-neutral-800/50 border border-neutral-700/50 rounded-lg p-5 hover:border-blue-500/50 transition-colors group">
                                 <div className="flex items-start justify-between mb-4">
                                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg">

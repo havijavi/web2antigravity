@@ -93,14 +93,14 @@ export function UsersPage() {
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-neutral-800">
-                                {users?.map((user) => (
+                                {users?.map((user: any) => (
                                     <tr key={user.id} className="hover:bg-neutral-800/30 transition-colors">
                                         <td className="px-6 py-4 font-medium text-white">{user.name}</td>
                                         <td className="px-6 py-4 text-neutral-300">{user.email}</td>
                                         <td className="px-6 py-4">
                                             <span className={`px-2 py-1 rounded text-xs font-medium inline-flex items-center gap-1 ${user.role === 'admin'
-                                                    ? 'bg-purple-500/10 text-purple-400 border border-purple-500/20'
-                                                    : 'bg-blue-500/10 text-blue-400 border border-blue-500/20'
+                                                ? 'bg-purple-500/10 text-purple-400 border border-purple-500/20'
+                                                : 'bg-blue-500/10 text-blue-400 border border-blue-500/20'
                                                 }`}>
                                                 {user.role === 'admin' ? <ShieldAlert size={12} /> : <Shield size={12} />}
                                                 {user.role}
@@ -108,8 +108,8 @@ export function UsersPage() {
                                         </td>
                                         <td className="px-6 py-4">
                                             <span className={`px-2 py-1 rounded text-xs font-medium inline-flex items-center gap-1 ${user.isActive
-                                                    ? 'bg-green-500/10 text-green-400 border border-green-500/20'
-                                                    : 'bg-red-500/10 text-red-400 border border-red-500/20'
+                                                ? 'bg-green-500/10 text-green-400 border border-green-500/20'
+                                                : 'bg-red-500/10 text-red-400 border border-red-500/20'
                                                 }`}>
                                                 {user.isActive ? <CheckCircle size={12} /> : <Ban size={12} />}
                                                 {user.isActive ? 'Active' : 'Inactive'}

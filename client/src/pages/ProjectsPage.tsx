@@ -49,7 +49,7 @@ export function ProjectsPage() {
                 <div className="text-center py-12 text-neutral-500">Loading projects...</div>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {projects?.map((project) => (
+                    {projects?.map((project: any) => (
                         <div key={project.id} className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 hover:border-neutral-700 transition-colors cursor-pointer group">
                             <div className="flex justify-between items-start mb-4">
                                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center text-blue-400 font-bold text-xl">
