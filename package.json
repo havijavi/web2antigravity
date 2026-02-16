@@ -1,0 +1,25 @@
+{
+  "name": "orm-automation-platform",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "client",
+    "server",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "concurrently \"npm run build -w server\" \"npm run build -w client\"",
+    "lint": "concurrently \"npm run lint -w server\" \"npm run lint -w client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.1"
+  }
+}
